@@ -1,14 +1,23 @@
+import { createTheme } from '@material-ui/core';
+import { purple } from '@material-ui/core/colors';
 import { ThemeProvider } from '@material-ui/styles';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { theme } from './theme';
 import App from './App';
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#007B8A",
+    },
+  },
+});
+
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
+  <ThemeProvider theme={theme}>
+    <React.StrictMode>
       <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+    </React.StrictMode>
+  </ThemeProvider>,
   document.getElementById('root')
 );
