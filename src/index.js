@@ -1,5 +1,4 @@
 import { createTheme } from '@material-ui/core';
-import { purple } from '@material-ui/core/colors';
 import { ThemeProvider } from '@material-ui/styles';
 import React from 'react';
 import ReactDOM from 'react-dom';

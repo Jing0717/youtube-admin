@@ -1,5 +1,4 @@
-import { alpha, AppBar, Avatar, Badge, createTheme, InputBase, makeStyles, Toolbar, Typography } from "@material-ui/core";
-import { purple } from "@material-ui/core/colors";
+import { alpha, AppBar, Avatar, Badge, InputBase, makeStyles, Toolbar, Typography } from "@material-ui/core";
 import { Cancel, Mail, Notifications, Search } from "@material-ui/icons";
 import { useState } from "react";
 
@@ -30,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
         },
         borderRadius: theme.shape.borderRadius,
         width: "50%",
-        display: "block",
         [theme.breakpoints.down("sm")]: {
             display: (props) => props.open ? "flex" : "none",
             width: "70%"
@@ -69,10 +67,10 @@ const Navbar = () => {
             <Toolbar className={classes.toolbar}>
                 {/* 使用h1 style,但標籤是h2 */}
                 <Typography variant="h6" className={classes.logoLg}>
-                    Jing Dev
+                    ef Service
                 </Typography>
                 <Typography variant="h6" className={classes.logoSm}>
-                    JING
+                    EF
                 </Typography>
                 <div className={classes.search}>
                     <Search />

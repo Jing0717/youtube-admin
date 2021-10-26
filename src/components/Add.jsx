@@ -1,4 +1,5 @@
 import { Container, makeStyles } from "@material-ui/core";
+import Post from "./Post";
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -6,11 +7,10 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-const Rightbar = () => {
+const Add = () => {
     const classes = useStyles()
-    return <Container className={classes.container}>
-        rightbar
-    </Container>
+    return <>
+    </>
 };
 
-export default Rightbar;
+export default Add;
