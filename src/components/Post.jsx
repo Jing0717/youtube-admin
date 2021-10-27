@@ -1,14 +1,15 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Container, makeStyles, Typography } from "@material-ui/core";
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
     media: {
         height: 250,
-        [theme.breakpoints.down("sm")]:{
-            height:150
-        }
+        // [theme.breakpoints.down("sm")]:{
+        //     height:150
+        // }
     },
     card:{
-        marginBottom:theme.spacing(5)
+        // marginBottom:theme.spacing(5)
     }
 }))
 

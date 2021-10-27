@@ -1,5 +1,6 @@
-import { Container, makeStyles, Typography } from "@material-ui/core";
-import { Bookmark, ExitToApp, Home, List, Person, PhotoCamera, PlayCircleOutline, Settings, Storefront, TabletMac } from "@material-ui/icons";
+import { Container, Typography } from "@mui/material";
+import { Bookmark, ExitToApp, Home, List, Person, PhotoCamera, PlayCircleOutline, Settings, Storefront, TabletMac } from "@mui/icons-material";
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     },
     text: {
         fontWeight:500,
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             display: "none"
         }
     }
