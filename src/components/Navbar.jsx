@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         },
         borderRadius: theme.shape.borderRadius,
         width: "50%",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             display: (props) => props.open ? "flex" : "none",
             width: "70%"
         }
