@@ -1,5 +1,5 @@
 import "./user.css"
-import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Public, Publish } from "@material-ui/icons"
+import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from "@mui/icons-material"
 import { Link } from "react-router-dom"
 
 export default function User() {
@@ -92,7 +92,7 @@ export default function User() {
             </div>
             <div className="userUpdateRight">
               <div className="userUpdateUpload">
-                <img src="https://i.pravatar.cc/400" className="userUpdateImg" />
+                <img src="https://i.pravatar.cc/400" className="userUpdateImg" alt="userUpdateImg"/>
                 <label htmlFor="file"><Publish className="userUpdateIcon"/></label>
                 <input type="file" id="file" style={{ display: "none" }} />
               </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import "./topbar.css";
-import { NotificationsNone as NotificationsNoneIcon, Language, Settings } from '@material-ui/icons';
+import { NotificationsNone as NotificationsNoneIcon, Language, Settings } from '@mui/icons-material';
 
 const Topbar = () => {
   return (
