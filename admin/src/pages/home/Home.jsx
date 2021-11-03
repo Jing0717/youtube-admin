@@ -4,12 +4,54 @@ import "./home.css";
 import { userData } from "../../dummyData";
 import WidgetSm from "../../components/widgetSm/WidgetSm";
 import WidgetLg from "../../components/widgetLg/WidgetLg";
+import { useEffect, useMemo, useState } from "react";
+import axios from "axios";
 
 export default function Home() {
+    const MONTHS = useMemo(() => [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Agu",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+    ], [])
+
+    const [userStats, setUserStats] = useState([]);
+
+    useEffect(() => {
+        const getStats = async () => {
+            try {
+                const res = await axios.get("/users/stats", {
+                    headers: {
+                        token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxODBkZDFiZGJiZGY3ZmFmNjZiNTYyYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNTkyNDMwNywiZXhwIjoxNjM2MzU2MzA3fQ.dkPSyehcSQgkHpuzAqJt4Hw_KN-FfZXk60RLSORY_0I"
+                    },
+                });
+                const statsList = res.data.sort(function (a, b) {
+                    return a._id - b._id;
+                });
+                statsList.map((item) => setUserStats(prev => [
+                    ...prev,
+                    { name: MONTHS[item._id - 1], "New User": item.total },
+                ])
+                );
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        getStats();
+    }, [MONTHS]);
+
     return (
         <div className="home">
             <FeaturedInfo />
-            <Chart data={userData} title="User Analytics" dataKey="Active User" grid />
+            <Chart data={userStats} title="User Analytics" dataKey="New User" grid />
             <div className="homeWidgets">
                 <WidgetSm />
                 <WidgetLg />
