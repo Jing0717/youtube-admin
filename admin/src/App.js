@@ -19,6 +19,9 @@ import { useContext } from "react";
 // import NewList from "./pages/newList/NewList";
 // import MovieList from "./pages/movieList/MovieList";
 import { Movie } from "@material-ui/icons";
+import ProductList from "./pages/productList/ProductList";
+import Product from "./pages/product/Product";
+import NewProduct from "./pages/newProduct/NewProduct";
 // import NewMovie from "./pages/newMovie/NewMovie";
 
 function App() {
@@ -44,15 +47,15 @@ function App() {
               <Route path="/newUser">
                 <NewUser />
               </Route>
-              {/* <Route path="/movies">
-                <MovieList />
-              </Route> */}
-              <Route path="/movie/:movieId">
-                <Movie />
+              <Route path="/movies">
+                <ProductList />
               </Route>
-              {/* <Route path="/newMovie">
-                <NewMovie />
-              </Route> */}
+              <Route path="/movie/:movieId">
+                <Product />
+              </Route>
+              <Route path="/newproduct">
+                <NewProduct />
+              </Route>
               {/* <Route path="/lists">
                 <ListList />
               </Route>
