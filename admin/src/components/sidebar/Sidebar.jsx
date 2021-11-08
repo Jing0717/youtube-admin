@@ -12,6 +12,7 @@ import {
   WorkOutline,
   Report,
   PlayCircleOutline,
+  List,
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
@@ -53,10 +54,12 @@ const Sidebar = () => {
                 Movies
               </li>
             </Link>
-            <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li>
+            <Link to="/lists" className="link">
+              <li className="sidebarListItem">
+                <List className="sidebarIcon" />
+                Lists
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />
               Reports
