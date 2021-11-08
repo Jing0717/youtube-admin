@@ -12,7 +12,7 @@ const Footer = () => {
             <>
               <span className={styles.linkText}>WORK WITH US</span>
               <Image
-                src={"/img/link.png"}
+                src={process.env.NEXT_PUBLIC_URL + "/img/link.png"}
                 width="40px"
                 height="40px"
                 alt=""

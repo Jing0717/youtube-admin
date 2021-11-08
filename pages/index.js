@@ -7,7 +7,6 @@ import { data } from '../data'
 import styles from '../styles/Home.module.css'
 
 export default function Home({ services }) {
-  console.log(services)
   return (
     <div>
       <Head>
