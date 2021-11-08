@@ -14,9 +14,9 @@ import NewUser from "./pages/newUser/NewUser";
 import Login from "./pages/login/Login";
 import { AuthContext } from "./context/authContext/AuthContext";
 import { useContext } from "react";
-// import ListList from "./pages/listList/ListList";
-// import List from "./pages/list/List";
-// import NewList from "./pages/newList/NewList";
+import ListList from "./pages/listList/ListList";
+import List from "./pages/list/List";
+import NewList from "./pages/newList/NewList";
 // import MovieList from "./pages/movieList/MovieList";
 import { Movie } from "@material-ui/icons";
 import ProductList from "./pages/productList/ProductList";
@@ -56,7 +56,7 @@ function App() {
               <Route path="/newproduct">
                 <NewProduct />
               </Route>
-              {/* <Route path="/lists">
+              <Route path="/lists">
                 <ListList />
               </Route>
               <Route path="/list/:listId">
@@ -64,7 +64,7 @@ function App() {
               </Route>
               <Route path="/newlist">
                 <NewList />
-              </Route> */}
+              </Route>
             </div>
           </>
         )}
