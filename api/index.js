@@ -6,6 +6,8 @@ const authRoute = require("./routes/auth")
 const userRoute = require("./routes/users")
 const movieRoute = require("./routes/movies")
 const listRoute = require("./routes/lists")
+const cors =require("cors");
+
 
 dotenv.config();
 
@@ -16,6 +18,7 @@ async function main() {
     console.log("DB Connection Successful!")
 }
 
+app.use(cors())
 app.use(express.json());
 
 app.use("/api/auth", authRoute);

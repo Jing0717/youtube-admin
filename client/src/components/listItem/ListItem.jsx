@@ -8,11 +8,12 @@ import "./listItem.scss";
 export default function ListItem({ index, item }) {
     const [isHovered, setIsHovered] = useState(false);
     const [movie, setMovie] = useState({});
+    const axiosInstance = axios.create({ baseURL: Process.env.REACT_APP_API_URL })
 
     useEffect(() => {
         const getMovie = async () => {
             try {
-                const res = await axios.get("/movies/find/" + item, {
+                const res = await axiosInstance.get("/movies/find/" + item, {
                     headers: {
                         token:
                             "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxODBkZDFiZGJiZGY3ZmFmNjZiNTYyYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNjQyMDUzOSwiZXhwIjoxNjM2ODUyNTM5fQ.GvWkfHH0leKH9wALAk_3cBksN6dINR1APxW2I51FTNs",
