@@ -5,11 +5,12 @@ import axios from "axios";
 
 export default function Featured({ type,  setGenre}) {
   const [content, setContent] = useState({});
+  const axiosInstance = axios.create({ baseURL: Process.env.REACT_APP_API_URL })
 
   useEffect(() => {
     const getRandomContent = async () => {
       try {
-        const res = await axios.get(`/movies/random?type=${type}`, {
+        const res = await axiosInstance.get(`/movies/random?type=${type}`, {
           headers: {
             token:
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxODBkZDFiZGJiZGY3ZmFmNjZiNTYyYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNjQyMDUzOSwiZXhwIjoxNjM2ODUyNTM5fQ.GvWkfHH0leKH9wALAk_3cBksN6dINR1APxW2I51FTNs",
