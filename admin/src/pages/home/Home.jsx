@@ -7,7 +7,7 @@ import WidgetLg from "../../components/widgetLg/WidgetLg";
 import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 
-const axiosInstance = axios.create({ baseURL: Process.env.REACT_APP_API_URL })
+const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_API_URL })
 
 export default function Home() {
     const MONTHS = useMemo(() => [

@@ -3,7 +3,7 @@ import { Visibility } from "@mui/icons-material"
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const axiosInstance = axios.create({ baseURL: Process.env.REACT_APP_API_URL })
+const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_API_URL })
 
 export default function WidgetSm() {
     const [newUsers, setNewUsers] = useState([]);

@@ -11,7 +11,7 @@ import {
   getMoviesSuccess,
 } from "./MovieActions";
 
-const axiosInstance = axios.create({ baseURL: Process.env.REACT_APP_API_URL })
+const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_API_URL })
 
 export const getMovies = async (dispatch) => {
   dispatch(getMoviesStart());
