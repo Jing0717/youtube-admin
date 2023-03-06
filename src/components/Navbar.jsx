@@ -68,10 +68,10 @@ const Navbar = () => {
             <Toolbar className={classes.toolbar}>
                 {/* 使用h1 style,但標籤是h2 */}
                 <Typography variant="h6" className={classes.logoLg}>
-                    ef Service
+                    Jing Service
                 </Typography>
                 <Typography variant="h6" className={classes.logoSm}>
-                    EF
+                    Jing
                 </Typography>
                 <div className={classes.search}>
                     <Search />
