@@ -48,7 +48,7 @@ export default function NewUser() {
           </select>
         </div>
         <div className="newUserItem">
-          <button className="newUserButton">Create</button>
+          <button className="newUserButton" disabled>Create</button>
         </div>
       </form>
     </div>
